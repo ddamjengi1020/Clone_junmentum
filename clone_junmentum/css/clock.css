@@ -1,0 +1,53 @@
+.js-clock {
+    font-size: 60px;
+    font-family: fantasy;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    margin-bottom: 30px;
+}
+
+.form {
+    display: none;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin: 0 auto;
+    left: 0;
+    right: 0;   
+}
+.input{
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    text-align: center;
+}
+
+.greetings {
+    display: none;
+}
+
+.button {
+    display:none;
+    width: 70px;
+    height: 20px;
+    background-color: white;
+    border: 1px solid rgb(206, 206, 206);
+    transition: all .7s ease-in-out;
+    cursor: pointer;
+}
+
+.button:hover{
+    width: 50px;
+    background-color: rgb(8, 122, 253);
+    border: none;
+    border-radius: 10px;
+    color: white;
+}
+
+.showing {
+    display: block;
+}
