@@ -7,7 +7,7 @@
     margin: 0 auto;
     left: 0;
     right: 0;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 
 .form {
@@ -28,8 +28,16 @@
 
 .greetings {
     display: none;
+    text-align: center;
+    font-size: 50px;
+    margin-left: 80px;
+    margin-right: 20px;
 }
-
+.write{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .button {
     display:none;
     width: 70px;
@@ -38,10 +46,15 @@
     border: 1px solid rgb(206, 206, 206);
     transition: all .7s ease-in-out;
     cursor: pointer;
+    /* text-align: center;
+    margin: 0 auto;
+    left: 0;
+    right: 0;  */
 }
 
 .button:hover{
     width: 50px;
+    margin-right: 20px;
     background-color: rgb(8, 122, 253);
     border: none;
     border-radius: 10px;
@@ -49,5 +62,5 @@
 }
 
 .showing {
-    display: block;
+    display: inline-block;
 }
