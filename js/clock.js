@@ -31,7 +31,11 @@ function getTime() {
   clockTitle.innerText = `${
     hours < 10
       ? `0${hours}`
-      : `${hours - 12 < 10 ? `0${hours - 12}` : `${hours - 12}`}`
+      : `${
+          hours - 12 < 10 && hours - 12 > 0
+            ? `0${hours - 12}`
+            : `${hours - 12 < 0 ? `${hours}` : `${hours - 12}`}`
+        }`
   } : ${minute < 10 ? `0${minute}` : `${minute}`} : ${
     second < 10 ? `0${second}` : `${second}`
   }`;
