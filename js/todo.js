@@ -17,21 +17,28 @@ function deleteToDo(event) {
 }
 
 function saveToDos() {
-  localStorage.setItem(TODOS_LS, JSON.stringify(toDos));
+  const toDosLength = toDos.length;
+  if (toDosLength <= 5) {
+    localStorage.setItem(TODOS_LS, JSON.stringify(toDos));
+  }
 }
 
 function paintToDo(text) {
   const li = document.createElement("li");
   const delBtn = document.createElement("button");
+  const checkBtn = document.createElement("input");
   const span = document.createElement("span");
   const newId = toDos.length + 1;
-  delBtn.innerText = "❌";
   delBtn.addEventListener("click", deleteToDo);
+  delBtn.classList.add("del-btn");
+  checkBtn.type = "checkbox";
+  delBtn.innerText = "DEL";
   span.innerText = text;
+  toDoList.appendChild(li);
+  li.appendChild(checkBtn);
   li.appendChild(span);
   li.appendChild(delBtn);
   li.id = newId;
-  toDoList.appendChild(li);
   const toDosObj = {
     text: text,
     id: newId
@@ -40,7 +47,7 @@ function paintToDo(text) {
   saveToDos();
 }
 
-function handleSubmit(event) {
+function submitToDoForm(event) {
   event.preventDefault();
   const currentValue = toDoInput.value;
   paintToDo(currentValue);
@@ -55,10 +62,10 @@ function loadToDos() {
       paintToDo(toDo.text);
     });
   }
+  toDoForm.addEventListener("submit", submitToDoForm);
 }
 
 function init() {
   loadToDos();
-  toDoForm.addEventListener("submit", handleSubmit);
 }
 init();

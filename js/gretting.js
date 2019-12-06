@@ -22,10 +22,21 @@ function askName() {
   form.addEventListener("submit", handleSubmit);
 }
 
+function deleteKey() {
+  localStorage.removeItem(KEY);
+  input.value = "";
+  loadName();
+}
+
 function changeDisplay(text) {
   form.classList.remove(SHOWING_CN);
   greeting.classList.add(SHOWING_CN);
-  greeting.innerText = `${text}`;
+  greeting.innerText = `${text}님의`;
+  const delBtn = document.createElement("button");
+  delBtn.classList.add("del-btn");
+  greeting.appendChild(delBtn);
+  delBtn.innerText = "DEL";
+  delBtn.addEventListener("click", deleteKey);
 }
 
 function loadName() {
