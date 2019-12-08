@@ -29,7 +29,7 @@ function paintToDo(text) {
     const delBtn = document.createElement("button");
     const checkBtn = document.createElement("input");
     const span = document.createElement("span");
-    const newId = Math.ceil(Math.random() * 100);
+    const newId = Math.ceil(Math.random() * 200);
     delBtn.addEventListener("click", deleteToDo);
     delBtn.classList.add("del-btn");
     checkBtn.type = "checkbox";
