@@ -1,6 +1,7 @@
-import "./css/anim.css";
+import "./css/common.css";
 
 const body = document.querySelector("body");
+const animation = document.querySelector(".animation");
 const styled = body.style;
 
 function init() {
@@ -9,7 +10,8 @@ function init() {
   styled.backgroundPosition = "center";
   styled.backgroundSize = "cover";
   styled.backgroundAttachment = "fixed";
-  styled.animation = `fadeIn 2s linear forwards`;
+  // styled.animation = `fadeIn 2s linear forwards`;
+  styled.animation = animation;
   styled.zIndex = "-1";
 }
 

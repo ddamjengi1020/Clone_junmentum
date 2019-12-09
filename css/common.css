@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Jua|Nanum+Pen+Script&display=swap&subset=korean');
 @import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,600,700&display=swap&subset=latin-ext');
 @import "reset.css";
 
@@ -116,6 +115,18 @@ label {
 
 .textcheck {
     text-decoration: line-through;
+}
+
+.animation {
+    animation: fadeIn 2s linear forwards;
+}
+
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+    }to{
+        opacity: 1;
+    }
 }
 
 /*여기까지 gretting*/
