@@ -23,6 +23,19 @@ function saveToDos() {
   }
 }
 
+function handleCheck(event) {
+  const target = event.target.parentNode.firstChild.checked;
+  // const checkbox = toDoList.querySelector("li input[type='checkbox']");
+  const span = event.target.parentNode.childNodes[1];
+
+  if (target === true) {
+    span.classList.add("textcheck");
+  }
+  if (target === false) {
+    span.classList.remove("textcheck");
+  }
+}
+
 function paintToDo(text) {
   if (toDos.length < 4) {
     const li = document.createElement("li");
@@ -33,6 +46,7 @@ function paintToDo(text) {
     delBtn.addEventListener("click", deleteToDo);
     delBtn.classList.add("del-btn");
     checkBtn.type = "checkbox";
+    checkBtn.addEventListener("click", handleCheck);
     delBtn.innerText = "DEL";
     span.innerText = text;
     toDoList.appendChild(li);
