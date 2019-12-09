@@ -1,7 +1,6 @@
-const body = document.querySelector("body");
-const styled = body.style;
-
 function init() {
+  const body = document.querySelector("body");
+  const styled = body.style;
   const randomNum = Math.ceil(Math.random() * 6);
   styled.backgroundImage = `url("images/${randomNum}.jpg")`;
   styled.backgroundPosition = "center";
