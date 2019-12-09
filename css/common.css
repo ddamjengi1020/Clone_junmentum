@@ -5,6 +5,15 @@ body,html {
     font-family: 'Quicksand', sans-serif;
 }
 
+body {
+
+    background-position : center;
+    background-size: cover;
+    background-attachment: fixed;
+    animation: fadeIn 2s linear forwards;
+    z-Index : -1;
+}
+
 .js-clock {
     font-size: 60px;
     font-family: fantasy;
@@ -115,10 +124,6 @@ label {
 
 .textcheck {
     text-decoration: line-through;
-}
-
-.animation {
-    animation: fadeIn 2s linear forwards;
 }
 
 @keyframes fadeIn {
