@@ -1,4 +1,4 @@
-import "./css/common.css";
+import "./css/anim.css";
 
 const body = document.querySelector("body");
 const styled = body.style;

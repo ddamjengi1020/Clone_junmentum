@@ -121,14 +121,6 @@ label {
 /*여기까지 gretting*/
 
 
-@keyframes fadeIn {
-    from{
-        opacity: 0;
-    }to{
-        opacity: 1;
-    }
-}
-
 /*여기까지 background*/
 
 .weather {
