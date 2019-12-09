@@ -1,5 +1,3 @@
-import "./css/common.css";
-
 const body = document.querySelector("body");
 const styled = body.style;
 
