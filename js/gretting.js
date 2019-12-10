@@ -31,7 +31,7 @@ function deleteKey() {
 function changeDisplay(text) {
   form.classList.remove(SHOWING_CN);
   greeting.classList.add(SHOWING_CN);
-  greeting.innerText = `Good morning. ${text}.`;
+  greeting.innerText = `Hello, ${text}`;
   const delBtn = document.createElement("button");
   delBtn.classList.add("del-btn");
   greeting.appendChild(delBtn);
