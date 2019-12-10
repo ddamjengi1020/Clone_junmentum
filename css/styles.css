@@ -3,15 +3,6 @@
 @import url("https://fonts.googleapis.com/css?family=Quicksand:400,500,600,700&display=swap&subset=latin-ext");
 
 @media (max-width: 501px) {
-  body,
-  html {
-    margin: 0;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-    background-color: rgb(85, 85, 85);
-    font-family: "Quicksand", sans-serif;
-  }
 
   .js-clock {
     font-size: 35px;
