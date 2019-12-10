@@ -25,8 +25,7 @@ function saveToDos() {
 
 function handleCheck(event) {
   const target = event.target.parentNode.firstChild.checked;
-  // const checkbox = toDoList.querySelector("li input[type='checkbox']");
-  const span = event.target.parentNode.childNodes[1];
+  const span = event.target.parentNode.childNodes[2];
 
   if (target === true) {
     span.classList.add("textcheck");
@@ -35,22 +34,36 @@ function handleCheck(event) {
     span.classList.remove("textcheck");
   }
 }
+/*문자열 5개 뽑아주는 코드*/
+function makeId() {
+  let text = "";
+  const POSSIBLE =
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+  for (var i = 0; i < 5; i++)
+    text += POSSIBLE.charAt(Math.floor(Math.random() * POSSIBLE.length));
+  return text;
+}
 
 function paintToDo(text) {
   if (toDos.length < 4) {
     const li = document.createElement("li");
     const delBtn = document.createElement("button");
+    const label = document.createElement("label");
     const checkBtn = document.createElement("input");
     const span = document.createElement("span");
     const newId = Math.ceil(Math.random() * 200);
+    const labelId = makeId();
     delBtn.addEventListener("click", deleteToDo);
     delBtn.classList.add("del-btn");
     checkBtn.type = "checkbox";
+    checkBtn.id = labelId;
+    label.htmlFor = labelId;
     checkBtn.addEventListener("click", handleCheck);
     delBtn.innerText = "DEL";
     span.innerText = text;
     toDoList.appendChild(li);
     li.appendChild(checkBtn);
+    li.appendChild(label);
     li.appendChild(span);
     li.appendChild(delBtn);
     li.id = newId;

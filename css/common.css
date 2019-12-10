@@ -120,6 +120,36 @@ label {
 
 .todolist input {
     margin-right: 15px;
+    display: none;
+}
+.todolist input[type=checkbox] + label{
+    cursor: pointer;
+    padding-left:25px;
+}
+
+.todolist input[type=checkbox] + label:before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 2px;
+    left: 0;
+    background-color: transparent;
+    border-radius: 5px;
+    border: 1px solid grey;
+}
+
+.todolist li {
+    position: relative;
+}
+
+.todolist input[type=checkbox]:checked + label:before{
+    content: "\2713";
+    font-size: 15px; 
+    font-weight:500; 
+    color: #fff;  
+    background: transparent;
+    text-align: center;   
 }
 
 .textcheck {
@@ -135,6 +165,7 @@ label {
     animation: fadeIn 2s linear forwards;
     z-index: -1;
 }
+
 
 @keyframes fadeIn {
     from{
