@@ -11,8 +11,8 @@ body,html {
 
 
 .js-clock {
-    font-size: 60px;
-    font-family: fantasy;
+    font-size: 50px;
+    font-family: 'Fredoka One', cursive;
     color: white;
     width: 350px;
     height: 100px;
@@ -209,6 +209,6 @@ label {
     position: absolute;
     top: 10px;
     right: 10px;
-    font-family: fantasy;
-    font-size: 15px;
+    font-family: 'Fredoka One', cursive;
+    font-size: 17px;
 }

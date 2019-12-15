@@ -1,11 +1,12 @@
 @import "common.css";
 @import "reset.css";
 @import url("https://fonts.googleapis.com/css?family=Quicksand:400,500,600,700&display=swap&subset=latin-ext");
+@import url('https://fonts.googleapis.com/css?family=Fredoka+One&display=swap');
 
 @media (max-width: 500px) {
   .js-clock {
-    font-size: 35px;
-    font-family: fantasy;
+    font-size: 40px;
+    font-family: 'Fredoka One', cursive;
     color: white;
     width: 350px;
     height: 50px;
@@ -216,8 +217,7 @@
     position: absolute;
     top: 10px;
     right: 10px;
-    font-family: fantasy;
-    font-weight: 400;
+    font-family: 'Fredoka One', cursive;
     font-size: 15px;
   }
 }
