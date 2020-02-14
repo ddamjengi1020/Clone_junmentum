@@ -33,7 +33,7 @@ function handleGeoSucces(position) {
 }
 
 function handleGeoError() {
-  console.log("Cant access geo location");
+  alert("Cant access geo location");
 }
 
 function askForCoords() {

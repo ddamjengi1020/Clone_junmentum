@@ -34,6 +34,7 @@ function handleCheck(event) {
     span.classList.remove("textcheck");
   }
 }
+
 /*문자열 5개 뽑아주는 코드*/
 function makeId() {
   let text = "";

@@ -1,92 +1,79 @@
 
 
 body,html {
-    margin: 0;
     height: 100%;
     width: 100%;
     overflow: hidden;
-    background-color: rgb(85, 85, 85);
     font-family: 'Quicksand', sans-serif;
 }
 
 
 .js-clock {
-    font-size: 50px;
+    font-size: 100px;
     font-family: 'Fredoka One', cursive;
     color: white;
-    width: 350px;
+    width: 700px;
     height: 100px;
-    padding-left: 20px;
     text-align: left;
-    margin-top: 20%;
-    margin-left: 40px;
+    margin-bottom: 40px;
 }
 /*여기까지 clock*/
 
-.bg-box {
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin: auto;
-    width: 450px;
-    height: 100%;
-    background-color: black;
-    border: none;
-    opacity: 0.5;
-    z-index: 0;
-    animation: slideIn 3s ease-out forwards;
-}
-
 .bg-container {
-    width: 450px;
-    height: 100%;
-    display: grid;  
-    grid-template-rows: 1fr 1fr;
+    z-index: 1;
     position: absolute;
     top: 0;
     right: 0;
-    animation: slideIn_2 3s ease-out forwards;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    margin-top: 23%;
+    width: fit-content;
+    height: fit-content;
+
+    animation: fadeIn 3s ease-out forwards;
 }
 
-.box {
-    width: 90%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;    
-    font-size: 25px;
-    font-family: 'Quicksand', sans-serif;
+.box{
+    text-align: center;
+    
 }
-label {
-    display: block;
+.box label {
+    font-family: cursive;
+    font-size: 25px;
+    display: inline;
     color: white;
-    margin-bottom: 10px;
 }
 
 .form {
     display: none;
     margin-bottom: 30px;
-        
 }
 
 .form-input[type=text],
 .todo-input[type=text] {
+    width: 100px;
     outline: none;
     border: none;
-    border-bottom: 1px solid rgb(150, 149, 149);
+    border-bottom: 2px solid rgb(150, 149, 149);
+    font-family: cursive;
     color: white;
     font-size: 25px;
     background-color: transparent;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     text-align: center;
+}
+.todoform {
+    display: none;
 }
 
 .greetings {
+    font-family: cursive;
     display: none;
     color: white;
     font-size: 30px;
     font-weight: 700;
-    margin-bottom: 87px;
+    margin-bottom: 20px;
 }
 
 .showing {
@@ -105,18 +92,22 @@ label {
     font-size: 10px;   
 }
 
-
 .todolist {
-    text-align: end;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     color: white;
     font-size: 20px;
     font-family: 'Quicksand', sans-serif;
 }
 
 .todolist li {
+    font-size: 23px;
+    font-family: cursive;
     display: flex;
     align-items: center;
     margin-bottom: 17px;
+    position: relative;
 }
 
 .todolist input {
@@ -137,11 +128,7 @@ label {
     left: 0;
     background-color: transparent;
     border-radius: 5px;
-    border: 1px solid grey;
-}
-
-.todolist li {
-    position: relative;
+    border: 1.5px solid rgb(182, 182, 182);
 }
 
 .todolist input[type=checkbox]:checked + label:before{
@@ -155,7 +142,7 @@ label {
 
 .textcheck {
     text-decoration: line-through;
-    color: rgb(131, 4, 4);
+    color: rgb(10, 10, 10);
 }
 
 .bgimage{
@@ -164,7 +151,7 @@ label {
     height: 100%;
     object-fit: cover;
     animation: fadeIn 2s linear forwards;
-    z-index: -1;
+    z-index: 0;
 }
 
 
@@ -176,29 +163,6 @@ label {
     }
 }
 
-@keyframes slideIn {
-    from{
-        opacity: 0;
-        transform: translateX(100px);
-    }
-    to{
-        opacity: 0.5;
-        transform: none;
-    }
-}
-
-
-@keyframes slideIn_2 {
-    from{
-        opacity: 0;
-        transform: translateX(100px);
-    }
-    to{
-        opacity: 1;
-        transform: none;
-    }
-}
-
 /*여기까지 gretting*/
 
 
@@ -207,8 +171,9 @@ label {
 .weather {
     color: white;
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 20px;
+    right: 25px;
     font-family: 'Fredoka One', cursive;
-    font-size: 17px;
+    font-size: 20px;
+    z-index: 2;
 }
