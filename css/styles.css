@@ -2,6 +2,7 @@
 @import "reset.css";
 @import url("https://fonts.googleapis.com/css?family=Quicksand:400,500,600,700&display=swap&subset=latin-ext");
 @import url('https://fonts.googleapis.com/css?family=Fredoka+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Gamja+Flower&display=swap&subset=korean');
 
 @media (max-width: 500px) {
   .js-clock {
@@ -27,11 +28,11 @@
     width: fit-content;
     height: fit-content;
     animation: fadeIn 3s ease-out forwards;
+    min-width: 375px;
 }
 
 .box {
     padding: 10px;
-    min-width: 375px;
     height: 165px;
     margin-left: 10px;
     display: flex;
@@ -40,11 +41,12 @@
   }
 
   .box label {
+    font-family: 'Gamja Flower', cursive;
     display: block;
     color: white;
-    font-size: 20px;
-    font-weight: 500;
-    margin-bottom: 15px;
+    font-size: 26px;
+    font-weight: 400;
+    margin-bottom: 5px;
   }
 
   .form {
@@ -61,12 +63,13 @@
     top: auto;
     right: 0;
     bottom: 0;
+    font-family: 'Gamja Flower', cursive;
     outline: none;
     border: none;
     width: 100px;
     border-bottom: 2px solid rgb(150, 149, 149);
     color: white;
-    font-size: 15px;
+    font-size: 23px;
     margin: 0;
     background-color: transparent;
     text-align: center;
@@ -75,7 +78,8 @@
   .greetings {
     display: none;
     color: white;
-    font-size: 20px;
+    font-family: 'Gamja Flower', cursive;
+    font-size: 23px;
     font-weight: 700;
     margin-bottom: 20px;
   }
@@ -104,13 +108,15 @@
     display: flex;
     flex-direction: column;
     text-align: center;
+    font-family: 'Gamja Flower', cursive;
     color: white;
-    font-size: 20px;
+    font-size: 23px;
     z-index: 3;
   }
 
   .todolist li {
     display: flex;
+    font-family: 'Gamja Flower', cursive;
     align-items: center;
     margin-bottom: 20px;
   }
