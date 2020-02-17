@@ -102,12 +102,12 @@
 
   .todolist {
     position: absolute;
+    width: 180px;
     top: 100px;
     left: 30px;
-    padding-left: 20px;
     display: flex;
     flex-direction: column;
-    text-align: center;
+    align-items: flex-start;
     font-family: 'Gamja Flower', cursive;
     color: white;
     font-size: 23px;
